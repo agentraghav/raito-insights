@@ -85,7 +85,7 @@
                                       </svg>
                                     </button>
                                   </div>
-                                  <div id="active_users" class="text-blue-12">{{active_users.active}} of the {{active_users.total}} users with access are active</div>
+                                  <div id="active_users" class="text-blue-12">{{apiData?.active_users.active}} of the {{apiData?.active_users.total}} users with access are active</div>
                                 </div>
                               </div>
                               <div class="col-span-12 m:col-span-4">
@@ -106,7 +106,7 @@
                                       </svg>
                                     </button>
                                   </div>
-                                  <div id="used_tables" class="text-violet-12">{{used_tables.active}} of the {{used_tables.total}} tables are read</div>
+                                  <div id="used_tables" class="text-violet-12">{{apiData?.used_tables.active}} of the {{apiData?.used_tables.total}} tables are read</div>
                                 </div>
                               </div>
                               <div class="col-span-12 m:col-span-4">
@@ -127,7 +127,7 @@
                                       </svg>
                                     </button>
                                   </div>
-                                  <div id="used_aps" class="text-plum-12">{{used_aps?.active}} of the {{used_aps?.total}} access providers are used</div>
+                                  <div id="used_aps" class="text-plum-12">{{apiData?.used_aps?.active}} of the {{apiData?.used_aps?.total}} access providers are used</div>
                                 </div>
                               </div>
                             </div>
@@ -165,86 +165,7 @@
                           </div>
                           <div class="mx-5 -mt-4 mb-5 text-grey-9">Total number of queries per data source</div>
                           <div class="mx-5 mb-7 first:mt-7">
-                            <div style="min-height: 300px;">
-                              <div class="recharts-responsive-container" width="434.5" height="300" style="width: 100%; height: 300px;">
-                                <div class="recharts-wrapper" style="position: relative; cursor: default; width: 435px; height: 300px;">
-                                  <svg class="recharts-surface" width="435" height="300" viewBox="0 0 435 300" version="1.1">
-                                    <defs>
-                                      <clippath id="recharts1-clip">
-                                        <rect x="60" y="20" height="224" width="375"></rect>
-                                      </clippath>
-                                    </defs>
-                                    <g class="recharts-cartesian-grid">
-                                      <g class="recharts-cartesian-grid-horizontal">
-                                        <line class="stroke-grey-2 stroke-2" stroke="#ccc" fill="none" x="60" y="20" width="375" height="224" offset="[object Object]" x1="60" y1="244" x2="435" y2="244"></line>
-                                        <line class="stroke-grey-2 stroke-2" stroke="#ccc" fill="none" x="60" y="20" width="375" height="224" offset="[object Object]" x1="60" y1="188" x2="435" y2="188"></line>
-                                        <line class="stroke-grey-2 stroke-2" stroke="#ccc" fill="none" x="60" y="20" width="375" height="224" offset="[object Object]" x1="60" y1="132" x2="435" y2="132"></line>
-                                        <line class="stroke-grey-2 stroke-2" stroke="#ccc" fill="none" x="60" y="20" width="375" height="224" offset="[object Object]" x1="60" y1="76" x2="435" y2="76"></line>
-                                        <line class="stroke-grey-2 stroke-2" stroke="#ccc" fill="none" x="60" y="20" width="375" height="224" offset="[object Object]" x1="60" y1="20" x2="435" y2="20"></line>
-                                      </g>
-                                    </g>
-                                    <g class="recharts-layer recharts-bar">
-                                      <g class="recharts-layer recharts-bar-rectangles">
-                                        <g class="recharts-layer recharts-bar-rectangle">
-                                          <path width="56" height="80.1392" x="125.75" y="45.86080000000001" class="recharts-rectangle fill-blue-4" radius="0" d="M 125.75,145.86080000000001 h 56 v 98.1392 h -56 Z"></path>
-                                        </g>
-                                        <g class="recharts-layer recharts-bar-rectangle">
-                                          <path width="56" height="20.34560000000002" x="313.25" y="223.65439999999998" class="recharts-rectangle fill-violet-4" radius="0" d="M 313.25,223.65439999999998 h 56 v 20.34560000000002 h -56 Z"></path>
-                                        </g>
-                                      </g>
-                                    </g>
-                                    <g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis">
-                                      <g class="recharts-cartesian-axis-ticks">
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
-                                          <text text-anchor="middle" height="56" orientation="bottom" width="375" type="category" x="153.75" y="274" class="fill-violet-10 active:fill-violet-12 cursor-pointer hover:underline" stroke="none" fill="#666" index="0">
-                                            <tspan data-testid="jonas" x="153.75" dy="0.71em">BigQuery</tspan>
-                                          </text>
-                                        </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
-                                          <text text-anchor="middle" height="56" orientation="bottom" width="375" type="category" x="341.25" y="274" class="fill-violet-10 active:fill-violet-12 cursor-pointer hover:underline" stroke="none" fill="#666" index="1">
-                                            <tspan data-testid="jonas" x="341.25" dy="0.71em">Global Snowflake</tspan>
-                                          </text>
-                                        </g>
-                                      </g>
-                                    </g>
-                                    <g class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis">
-                                      <g class="recharts-cartesian-axis-ticks">
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
-                                          <text orientation="left" width="60" height="224" type="number" x="52" y="244" stroke="none" fill="#656884" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end">
-                                            <tspan x="52" dy="0.355em">0</tspan>
-                                          </text>
-                                        </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
-                                          <text orientation="left" width="60" height="224" type="number" x="52" y="188" stroke="none" fill="#656884" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end">
-                                            <tspan x="52" dy="0.355em">35K</tspan>
-                                          </text>
-                                        </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
-                                          <text orientation="left" width="60" height="224" type="number" x="52" y="132" stroke="none" fill="#656884" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end">
-                                            <tspan x="52" dy="0.355em">70K</tspan>
-                                          </text>
-                                        </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
-                                          <text orientation="left" width="60" height="224" type="number" x="52" y="76" stroke="none" fill="#656884" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end">
-                                            <tspan x="52" dy="0.355em">105K</tspan>
-                                          </text>
-                                        </g>
-                                        <g class="recharts-layer recharts-cartesian-axis-tick">
-                                          <text orientation="left" width="60" height="224" type="number" x="52" y="20" stroke="none" fill="#656884" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end">
-                                            <tspan x="52" dy="0.355em">140K</tspan>
-                                          </text>
-                                        </g>
-                                      </g>
-                                    </g>
-                                  </svg>
-                                  <div class="recharts-tooltip-wrapper recharts-tooltip-wrapper-right recharts-tooltip-wrapper-bottom" style="pointer-events: none; visibility: hidden; position: absolute; top: 0px; left: 0px; outline: none; transform: translate(163.75px, 20px);">
-                                    <div class="recharts-default-tooltip" style="margin: 0px; padding: 10px; background: rgb(44, 45, 54); border: none; white-space: nowrap; color: rgb(252, 252, 252); border-radius: 0.5rem; max-width: 240px;">
-                                      <p class="recharts-tooltip-label" style="margin: 0px; white-space: normal; word-break: break-all;">BigQuery</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                            <chart-component :data="apiData"></chart-component>
                           </div>
                         </div>
                       </section>
@@ -915,22 +836,128 @@
     <link rel="modulepreload" href="./static/build/_shared/chunk-TDB7LBMW.js">
     <link rel="modulepreload" href="./static/build/_shared/chunk-YASOZUF5.js">
     <link rel="modulepreload" href="./static/build/routes/__dashboard/__boundary/index-7X7EOXIV.js">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-tooltip@0.1.3"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js/dist/Chart.min.css">
     <script>
-      const { createApp } = Vue
-      fetch("../metrics_example.json")
-          .then((res) => {
-            return res.json();
+       const app = new Vue({
+    data: {
+      apiData:null,
+      tooltipText: 'This is a tooltip',
+    },
+    created() {
+      // Fetch data from API
+      this.fetchData();
+    },
+    methods: {
+      fetchData() {
+        // Make an API request using fetch or any other method
+        fetch("../metrics_example.json")
+          .then(response => response.json())
+          .then(data => {
+            this.apiData = data;
           })
-          .then((data) =>{
-            createApp({
-              data() {
-                return {
-                   ...data
-                }
+          .catch(error => {
+            console.error('Error fetching data:', error);
+          });
+      }
+    }
+  });
+    </script>
+    <script>
+      function convertToK(number) {
+        if (number >= 1000) {
+            var roundedNum = Math.floor(number / 1000);
+            return roundedNum + 'k';
+        }
+        return number.toString();
+      }
+      Vue.component('chart-component', {
+          props: ['data'],
+          watch: {
+            data(newValue, oldValue) {
+            this.createChart()
+            }
+          },
+          methods: {
+            createChart() {
+            // Get the canvas element
+            const canvas = this.$refs.chartCanvas;
+            const ctx = canvas.getContext('2d');
+
+             // Create the chart using Chart.js
+            new Chart(ctx, {
+              type: 'bar',
+              data: {
+                labels: this.data?.['data_usage-data_source'].reduce((acc,val)=>{
+                acc.push(val?.name);
+                return acc;
+              },[]),
+              datasets: [{
+                barThickness: 50,
+                data: this.data?.['data_usage-data_source'].reduce((acc,val)=>{
+                  acc.push(val?.queries);
+                  return acc;
+                },[]),
+                backgroundColor: ['#8abcfe', '#d0b6fa']
+              }]
+            },
+          options: {
+            responsive: true,
+            plugins: {
+              legend: {
+              display: false // Hide the graph labels
+            },
+            tooltip: {
+              callbacks: {
+                label: (context) => `${context.dataset.label || ''} ${convertToK(context.parsed.y)}`
               }
-          }).mount('#app')
+            }
+          },
+          scales: {
+            x: {
+              grid: {
+                display: false,
+            },
+            ticks:{
+                font:   {
+                    size: 16,
+                  },
+                color:'#560fca'
+              }
+            },
+            y: {
+              beginAtZero: true,
+              offsetAmount: 35000,
+              grid: {
+                drawBorder: false,
+              },
+              ticks: {
+                font: {
+                    size: 16,
+                },
+                color: '#656884',
+                stepSize: 20000,
+                callback: function(value, index, ticks) {
+                    return convertToK(value);
+                },
+              }
+            }
+          },
+        }
         });
+      }
+    },
+    template: `
+      <div>
+        <canvas ref="chartCanvas"></canvas>
+      </div>
+    `,
+  });
+    </script>
+    <script>
+       app.$mount("#app");
     </script>
     <script>window.ENV = {"build_version":"OllRw9sVF9itJSTN7MF8uQ==","NODE_ENV":"production"}</script><span id="recharts_measurement_span" aria-hidden="true" style="position: absolute; top: -20000px; left: 0px; padding: 0px; margin: 0px; border: none; white-space: pre;">25K</span>
     <div id="a11y-status-message" role="status" aria-live="polite" aria-relevant="additions text" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"></div>
